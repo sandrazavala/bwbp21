@@ -43,7 +43,8 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
       await this.context.setUser(user);
       this.props.navigation.navigate('App');
     } else {
-      alert('Incorrect username or password.');
+      this.props.navigation.alert('Incorrect username or password.');
+      //block user from accessing we
     }
   }
 
